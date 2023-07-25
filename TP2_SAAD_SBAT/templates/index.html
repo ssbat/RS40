@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+<body >
+    
+
+<form class="sign-in-form" method="post">
+
+    <!-- <h3 class="title-h3">
+        {{error}}
+    </h3> -->
+    <h3 class="title-h3">
+        Sign in with your username and password
+    </h3>
+    <p> <small class='error'>{{error}} </small></p>
+        <!-- //affichage de l'erreur -->
+        <p> </p>
+    
+    <input type="text" placeholder="Username" name="username" for="username" class="sign-in-input">
+    <input  type="password" placeholder="Password" name="password"  class="sign-in-input">
+    <p class="note">username:admin <br>password:rs40</p>
+    <button class="btn-submit" type="submit">Submit</button>
+
+
+</body>
+</html>

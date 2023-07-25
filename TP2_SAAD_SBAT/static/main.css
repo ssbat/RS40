@@ -1,0 +1,927 @@
+body{
+    height:100%;
+    box-sizing: border-box;
+    margin: 0;
+    background-image: url('bg.jpg');
+
+}
+/* Style nav-bar */
+nav li{
+    color:rgb(170, 170, 170);
+}
+
+.nav-ul{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    margin: 1em;
+    font-family: 'Lato', sans-serif;
+}
+.nav-li{
+    display: inline-block;
+}
+.nav-li:hover{
+    color: #2d2d2d;
+    transition: .5s;
+}
+.last{
+    text-align: center;
+    flex-grow: 1;
+}
+a:visited {
+    color: inherit;
+    text-decoration: none;
+}
+a{
+    text-decoration: none;
+}
+/* style logo */
+.logo{
+    justify-self: flex-start;
+    margin:0 1em;
+    /* flex-grow: 1; */
+}
+.logo-img{
+    width: 200px;
+    transform: translateX(-2em);
+
+}
+
+.center{
+    justify-self: center;
+    flex-grow: 1;
+}
+
+.sign-up{
+    margin-left: .5em;
+    border: 0.2px solid #3B71CA;
+    border-radius: 8px;
+    padding: .5em;
+    /* background-color: rgb(51, 30, 238); */
+    color: #3B71CA;
+}
+.sign-up:hover{
+    color: white;
+    background-color: #3B71CA;
+}
+/* display grid pour la div qui contients le left-bar main right-bar  */
+.main{
+    display: grid;
+                   /* left-bar main right-bar */
+    grid-template-columns: 20% 65% 15%;
+    background-color: white;
+    margin: 0;
+    background-color: #eded;
+    height: 100vh;
+}
+.title-h1{
+    text-align: center;
+    color: rgb(230, 29, 29);
+    color: rgb(249, 253, 7);
+
+    font-family: 'Holtwood One SC', serif;
+
+}
+.title-h3{
+    font-family: 'Tilt Warp', cursive;
+    color: #2d2d2d;
+    color: white;
+}
+/* style pour les formulaires */
+/* signin+signup */
+.sign-in-form{
+    width: fit-content;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    /* background-color: white; */
+    border-radius: 10px;
+    width: 500px;
+    /* padding: 4em 0; */
+    justify-content: center;
+    align-items: center;
+    /* border: 0.5px solid white; */
+    color: white;
+    font-size: 1em;
+}
+
+.sign-in-input{
+    font-size: 1em;
+    height: 2em;
+    margin: 0.2em;
+    text-shadow: none;
+    border: 1px solid #ccc;
+
+    border-radius: 8px;
+    width: 15em;
+}
+
+.note{
+    color: #ebe2e2;
+    font-size: 0.9em;
+    margin-left: 0.2em;
+}
+
+.btn-submit{
+    margin: 1em;
+    background-color: #6e3eff;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    height: 3em;
+    color: white;
+    width: 50%;
+    cursor: pointer;
+
+}
+.btn-submit:hover{
+    background-color: #52389e;
+    transition: 0.5s;
+}
+
+.info-div label{
+    display: block;
+}
+.div-con{
+  margin-top: 3em;
+}
+#birthday{
+    height: 3em;
+    width: 18.8em;
+
+}
+form small,.error{
+    display: block;
+    color: red;
+}
+.success{
+    color: lightgreen;
+}
+
+.error{
+    font-size:large;
+}
+
+
+/* style pour le post */
+
+.btn-signout,#btn-add{
+    background: none;
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+    /* color:  white; */
+}
+
+.a-add{
+    display: block;
+    margin: 0 auto;
+    width: fit-content;
+}
+.btn-post{
+    display: block;
+    text-align: center;
+    /* width: 100%; */
+}
+
+.post-input{
+    width: 300px;
+}
+.post-area{
+    height: 6em;
+    font-size: 2em;
+}
+
+
+
+hr{
+    /*  */
+    /* width: 80%; */
+    border: 0.5px solid #ebdada;;
+}
+
+.post{
+    /* border: .5px solid white; */
+    border-radius: 8px;
+    margin:2em 0em;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    background: white;
+}
+/*Display My Post begin */
+.title-post{
+    color: rgb(233, 37, 37);
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.content{
+    margin: 0;
+    font-size: 1.1em;
+    color: #125d9e;
+
+
+}
+
+.author{
+    margin: 0.2em 0;
+    font-weight: bold;
+    font-size: 1em;
+color: rgb(40, 161, 70);
+
+}
+.time{
+    color: #999;
+    margin-left: 0.1em;
+    font-size: medium;
+
+}
+
+
+.post-header {
+    display: flex;
+    align-items: center;
+}
+.post-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+/* style pour le commentaire  */
+.comment-avatar{
+    width: 40px;
+    height: 40px;
+
+
+}
+.post-username {
+    font-weight: bold;
+    margin-right: 5px;
+    color: rgb(40, 161, 70);
+}
+.post-username:hover{
+  font-size: large;
+  padding: .3em;
+  transition: 1s;
+}
+/* style pour le commentaire  */
+
+.comment-username{
+    align-self: flex-start;
+    display: block;
+    margin-bottom:1em ;
+    font-size: smaller;
+}
+
+.post-handle {
+color: #999;
+}
+
+.post-body{
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: #0275d8;
+}
+
+
+/* style pour le like et le dislike */
+.like-edit-bar {
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    /* border-bottom: 1px solid #ddd; */
+    padding: 10px;
+    width: 100%;
+  }
+
+  .like-button {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    /* padding: 5px 10px; */
+    color: #999;
+    font-size: 0.8em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    /* width: 33.3333%; */
+    text-align: center;
+  }
+
+  .like-button:hover {
+    background-color: #f9f9f9;
+  }
+
+/* //edit-boutton */
+
+  .edit-button:hover {
+    background-color: #f9f9f9;
+  }
+
+  .edit-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 126, 255, 0.3);
+  }
+
+
+.edit{
+    background: none;
+	color: inherit;
+	border: none;
+	/* padding: 0; */
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+    width: 39px;
+    height: 30px;
+}
+
+
+.like-btn {
+    display: inline-flex;
+    align-items: center;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    /* padding: 0; */
+  }
+
+  .like-icon {
+    width: 22px;
+    height: 22px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: 5px;
+    margin: 0.4em;
+    margin-bottom: 0.6em;
+    background-color: white;
+  }
+
+  .dislike{
+    width: 28px;
+    height: 28px;
+  }
+  /* style pour le boutton delete */
+.trash{
+  background-image: url("../images/trash.png");
+}
+  .like-text {
+    font-size: 14px;
+    font-weight: bold;
+    margin-right: 5px;
+  }
+
+  .like-count {
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+.like-icon{
+    /* background: none; */
+	color: inherit;
+	border: none;
+	padding: 0;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+.form-like{
+    display: flex;
+    /* padding-top: 5px; */
+    align-items: center;
+}
+
+
+
+/* style sidebar  */
+.sidebar {
+    margin-top: 3em;
+    display: flex;
+    flex-direction: column;
+    flex-direction: column;
+  }
+
+  .user {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 10px;
+
+  }
+
+  .user img {
+    width: 75px;
+    height: 75px;
+    margin-right: 10px;
+  }
+
+  .user h2 {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin: 0;
+  }
+
+
+
+
+
+.side-bar{
+    background-color: white;
+    margin-top:10px;
+    border-radius: 10px;
+}
+
+
+/*nouvelle*/
+/* le style des utilisateur afficher dans le right bar  */
+/* ce style je l'ai cherché sur internet */
+/* source:https://www.bootdey.com/snippets/view/light-user-list */
+a{
+    color: inherit;
+}
+.case{
+    display: flex;
+    align-items:flex-start;
+    /* justify-content: space-between; */
+}
+.case:hover{
+    background-color: #eeeeee;
+    transition: 1s;
+    padding: 0.4em;
+}
+.h5-test{
+    margin:  0;
+    color:#007bff;
+    font-size: 1em;
+}
+
+.user-container .google-maps{
+    background: #f8f8f8;
+    border-radius: 4px;
+    border: 1px solid #f1f2f2;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  .user-container .google-maps .map{
+    height: 300px;
+    width: 100%;
+    border: none;
+  }
+
+  .user-container .user{
+    padding: 20px 0;
+    border-top: 1px solid #f1f2f2;
+    border-bottom: 1px solid #f1f2f2;
+    margin-bottom: 20px;
+  }
+
+  img.profile-photo-lg{
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    margin-right: 1em;
+  }
+
+
+.profile-bio{
+  display: flex;
+}
+.profile-bio h3{
+  flex-grow: 1;
+}
+.profile-bio .edit{
+  margin-right: 2em;
+  border:  1px solid #326ccb ;
+  color: #326ccb;
+  border-radius: 8px;
+  font-size: 1em;
+}
+
+
+  .user-container h3{
+    text-align: center;
+    color: rgb(210, 18, 18);
+  }
+  .btn-cmnt{
+    background: #74befa;
+	color: #fff;
+	border: 1px solid #eee;
+	border-radius: 20px;
+	box-shadow: 5px 5px 5px #eee;
+	text-shadow: none;
+    height: 2em;
+
+  }
+  .btn-cmnt:hover{
+    background: #016ABC;
+	color: #fff;
+	border: 1px solid #eee;
+	border-radius: 20px;
+	box-shadow: 5px 5px 5px #eee;
+	text-shadow: none;
+  }
+
+
+  /*fin right bar*/
+/* left bar style */
+
+.left-bar{
+    background-color:#326ccb ;
+    display: flex;
+    flex-direction: column;
+    /* position: fixed; */
+
+}
+
+
+
+.title-bar{
+    text-align: center;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.5em;
+    margin: 0;
+    margin-top: .5em;;
+}
+
+.link-bar{
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    height: 55px;
+}
+.link-bar a{
+    display: block;
+}
+.link-bar h5{
+    font-size: 1em;
+    flex-grow: 1;
+    text-align: center;
+    margin-right: 1em;
+    font-family: 'Poppins', sans-serif;
+}
+.link-bar img{
+    /* margin-right: 2em; */
+    margin-left: 0.5em;
+    width: 40px;
+
+}
+
+.links-container hr{
+    width: 80%;
+
+}
+.link-bar:hover{
+    background-color:#4d80d3 ;
+    transition: 1s;
+    padding: 0.5em;
+
+}
+
+
+
+
+
+
+
+/*
+profile page
+*/
+
+.profile-info{
+    background-color: white;
+    margin-top: 3em;
+    margin: 10px;
+    margin-top: 0;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+.cover-photo{
+    opacity: 1;
+    height: 200px;
+    width: 100%;
+}
+.company-logo{
+position: relative;
+width: 152px;
+    height: 152px;
+flex-shrink: 0;
+margin: 1em;
+margin-top: -5em;
+}
+
+.logo-profile{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background-color: #951515; */
+    background-color: white;
+    border-radius: 50%;
+}
+
+.profile-name{
+    margin-top: .2em;
+    margin-left: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.5em;
+
+}
+.desc{
+    display: flex;
+    align-items: flex-start;
+}
+.desc-1{
+    width: 50%;
+    margin-left: 1em;
+    font-weight: 300;
+    font-family: 'Montserrat', sans-serif;
+    word-break: normal;
+    text-align: justify;
+    margin-bottom: 2em;
+    /* text-justify:distribute-all-lines */
+    /* flex-grow: 1; */
+
+}
+.desc-2{
+    width: 50%;
+    display: flex;
+    margin-left: 3em;
+    /* align-items:center */
+}
+.utbm{
+    width: 80px;
+    margin-top: -20px;
+    margin-left: 1em;
+
+}
+.uni{
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 0px;
+    font-weight: 900;
+}
+
+/* style pour le systeme de recherche */
+
+.search-form{
+    width: 100%;
+}
+
+
+.search{
+    display: block;
+    padding: 10px;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.tweet-image {
+    display: block;
+    max-width: 400px;
+    max-height:600px;
+
+    margin-bottom: 8px;
+
+  }
+/* style pour ajouter un fichier */
+input[type=file]::file-selector-button {
+    background-color: inherit;
+    color: white;
+    border: 0px;
+    border: 1px solid #e5e5e5;
+    border-radius: 8px;
+    padding: 10px 15px;
+    margin-right: 20px;
+    transition: .5s;
+  }
+  
+  input[type=file]::file-selector-button:hover {
+    cursor: pointer; 
+    padding: 1em;
+    transition: 1s; 
+}
+#fileupload::file-selector-button{
+    color:#007bff ;
+}
+.update{
+    margin-bottom: .5em;
+    margin-left: -1.5em;
+}
+.remove-div{
+    width: 60%;
+    margin-bottom: 1em;
+}
+.remove{
+    align-self: flex-start;
+}
+
+/* div qui contient les posts */
+.post-container {
+    border-radius: 8px;
+    margin:2em 0em;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+    background: white;
+  }
+  
+  .post-form {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+  }
+  
+  .post-form textarea {
+    width: 100%;
+    height: 100px;
+    border: none;
+    resize: none;
+  }
+  
+  .post-form button {
+    background-color: #326ccb;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .post-list {
+    margin: 10px auto;
+    width: 500px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  textarea:focus, input:focus{
+    outline: 0;
+}
+#posting-form{
+    display: inline;
+}
+
+
+/* contact me */
+
+  .wrapper header{
+    font-size: 22px;
+    font-weight: 600;
+    padding: 20px 30px;
+    border-bottom: 1px solid #ccc;
+  }
+  .wrapper form{
+    margin: 35px 30px;
+  }
+  .wrapper form.disabled{
+    pointer-events: none;
+    opacity: 0.7;
+  }
+  form .dbl-field{
+    display: flex;
+    margin-bottom: 25px;
+    justify-content: space-between;
+  }
+  .dbl-field .field{
+    height: 50px;
+    display: flex;
+    position: relative;
+    width: 98%;
+  }
+  .wrapper form i{
+    position: absolute;
+    top: 50%;
+    left: 18px;
+    color: #ccc;
+    font-size: 17px;
+    pointer-events: none;
+    transform: translateY(-50%);
+  }
+  form .field input,
+  form .message textarea{
+  
+    outline: none;
+    padding: 0 18px 0 48px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  .field input::placeholder,
+  .message textarea::placeholder{
+    color: #ccc;
+  }
+  .field input:focus,
+  .message textarea:focus{
+    padding-left: 47px;
+    border: 2px solid #0D6EFD;
+  }
+  .field input:focus ~ i,
+  .message textarea:focus ~ i{
+    color: #0D6EFD;
+  }
+  form .message{
+    position: relative;
+  }
+  form .message i{
+    top: 30px;
+    font-size: 20px;
+  }
+  form .message textarea{
+    width: 80%;
+    height: 250px;
+    padding: 15px 20px 0 48px;
+  }
+
+  .message textarea:focus{
+    padding-top: 14px;
+  }
+  form .button-area{
+    margin: 25px 0;
+    display: flex;
+    align-items: center;
+  }
+  .button-area button{
+    color: #fff;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 13px 25px;
+    background: #0D6EFD;
+    transition:  0.3s ease;
+  }
+  .button-area button:hover{
+    background: #025ce3;
+  }
+  .button-area span{
+    font-size: 17px;
+    margin-left: 30px;
+    display: none;
+  }
+  
+  /* fin contact me */
+
+
+  /*about us*/
+  .intro p{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    margin:0 2em;
+    padding: 2em 2em 2em 0;
+    width: 62%;
+    font-size: 2.2rem;
+    line-height: 1.12;
+    color: white;
+  }
+  .intro{
+    background-color: #3B71CA;
+  }
+  .features{
+    display: flex;
+  }
+  .features div{
+    width: 50%;
+  }
+  .features img{
+    display: block;
+    margin-left: auto;
+  }
+  .features div {
+    font-family: 'Montserrat', sans-serif;
+    color: #ffa3ba;
+    font-size: 2em;
+    margin-top: 2em;
+    margin-left: .5em;
+  }
+  .features div p{
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+  }
+  .features .left{
+    margin-right: auto;
+  }
+  .features div .left{
+    color: #016ABC;
+  }
+  .features .me{
+    width: 400px;
+    margin-right: 8em;
+    border-radius: 8px;
+  }
+  .features .right{
+    color: #49ceca;
+  }
